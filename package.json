@@ -1,0 +1,22 @@
+{
+  "name": "discord-bot-learning",
+  "version": "1.0.0",
+  "description": "A repository for learning how to make Discord bots using Node.js.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oculux314/discord-bot-learning.git"
+  },
+  "author": "Nate Williamson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oculux314/discord-bot-learning/issues"
+  },
+  "homepage": "https://github.com/Oculux314/discord-bot-learning#readme",
+  "dependencies": {
+    "discord.js": "^14.11.0"
+  }
+}
