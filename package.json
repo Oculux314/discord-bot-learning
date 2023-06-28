@@ -2,9 +2,8 @@
   "name": "discord-bot-learning",
   "version": "1.0.0",
   "description": "A repository for learning how to make Discord bots using Node.js.",
-  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
