@@ -4,13 +4,22 @@ console.log(1);
 console.log(true);
 
 // Get current date
-now = new Date();
+let now = new Date();
+now = {
+  hi: "hi",
+  bye: "bye"
+}
+
 console.log(now);
 
 // Unix 0 (1st January 1970)
-unix0 = new Date(0);
+const unix0 = new Date(0);
 console.log(unix0);
 
-// Random date between 1970 and now
-randomDate = new Date(Math.random() * now.getTime());
-console.log(randomDate);
+//console.log(now.getTime());
+
+console.log(Object.getOwnPropertyNames(now));
+
+for (let key in now) {
+    console.log(key);
+}
