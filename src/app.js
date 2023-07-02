@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 const Client = new Discord.Client({
   intents: [
@@ -18,5 +18,14 @@ const Client = new Discord.Client({
   ]
 });
 
-// console.log(Discord);
-// console.log(Client);
+Client.on("ready", (client) => {
+  console.log("Bot ready!");
+})
+
+Client.on("connection", (stream) => {
+  console.log("someone connected!");
+});
+
+Client.login("TOKEN");
+
+console.log("Script ran!");
