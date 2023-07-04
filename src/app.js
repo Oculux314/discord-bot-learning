@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const {TOKEN} = require("../config.json");
 
 const Client = new Discord.Client({
   intents: [
@@ -19,13 +20,12 @@ const Client = new Discord.Client({
 });
 
 Client.on("ready", (client) => {
-  console.log("Bot ready!");
-})
-
-Client.on("connection", (stream) => {
-  console.log("someone connected!");
+  console.log("Bot ready! Tag: " + client.user.tag);
 });
 
-Client.login("TOKEN");
+Client.on("messageCreate", (msg) => {
+  console.log(msg);
+});
 
-console.log("Script ran!");
+Client.login(TOKEN);
+console.log("app.js ran successfully!");
