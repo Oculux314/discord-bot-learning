@@ -16,14 +16,14 @@ const Client = new Discord.Client({
     // Discord.Partials.Message,
     // Discord.Partials.Reaction,
     // Discord.Partials.GuildScheduledEvent,
-  ]
+  ],
 });
 
-Client.on("ready", (client) => {
+Client.on("ready", client => {
   console.log("Bot ready! Tag: " + client.user.tag);
 });
 
-Client.on("messageCreate", (msg) => {
+Client.on("messageCreate", msg => {
   console.log(msg);
 });
 
