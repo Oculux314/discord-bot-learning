@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "A repository for learning how to make Discord bots using Node.js.",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "npx eslint src && nodemon src/app.js",
+    "start": "node src/index.js",
+    "dev": "npx eslint src && nodemon src/index.js",
     "lint": "npx eslint src"
   },
   "repository": {
