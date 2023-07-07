@@ -1,2 +1,7 @@
+# Environment
 node_modules
 .env
+
+# Log/debug files
+log.txt
+*.log
