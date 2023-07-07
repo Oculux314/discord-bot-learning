@@ -7,7 +7,9 @@
     "start": "node src/index.js",
     "dev": "npx eslint src && nodemon src/index.js",
     "lint": "npx eslint src",
-    "flint": "npx eslint src --fix"
+    "lint:f": "npx eslint src --fix",
+    "deploy": "node src/deploy-commands.js",
+    "deploy:g": "set DEPLOY_GLOBAL=true&& node src/deploy-commands.js"
   },
   "repository": {
     "type": "git",
