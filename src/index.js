@@ -1,33 +1,21 @@
-const Discord = require("discord.js");
+const {Client, Events, GatewayIntentBits} = require("discord.js");
 const dotenv = require("dotenv");
 
-dotenv.config();
+dotenv.config(); // Load environmental variables
 
-const Client = new Discord.Client({
+const client = new Client({
   intents: [
-    // Discord.GatewayIntentBits.Guilds,
-    // Discord.GatewayIntentBits.GuildMembers,
-    // Discord.GatewayIntentBits.GuildMessages,
-    // Discord.GatewayIntentBits.DirectMessages,
-    // Discord.GatewayIntentBits.MessageContent,
-  ],
-  partials: [
-    // Discord.Partials.User,
-    // Discord.Partials.Channel,
-    // Discord.Partials.GuildMember,
-    // Discord.Partials.Message,
-    // Discord.Partials.Reaction,
-    // Discord.Partials.GuildScheduledEvent,
+    GatewayIntentBits.Guilds,
+    // GatewayIntentBits.GuildMembers,
+    // GatewayIntentBits.GuildMessages,
+    // GatewayIntentBits.DirectMessages,
+    // GatewayIntentBits.MessageContent,
   ],
 });
 
-Client.on("ready", client => {
-  console.log("Bot ready! Tag: " + client.user.tag);
+client.once(Events.ClientReady, c => {
+  console.log(`Client ready! Logged in as ${c.user.tag}.`);
 });
 
-Client.on("messageCreate", msg => {
-  console.log(msg);
-});
-
-Client.login(process.env.TOKEN);
+client.login(process.env.TOKEN);
 console.log("app.js ran successfully!");

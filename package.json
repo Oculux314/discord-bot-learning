@@ -2,10 +2,12 @@
   "name": "discord-bot-learning",
   "version": "1.0.0",
   "description": "A repository for learning how to make Discord bots using Node.js.",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "npx eslint src && nodemon src/index.js",
-    "lint": "npx eslint src"
+    "lint": "npx eslint src",
+    "flint": "npx eslint src --fix"
   },
   "repository": {
     "type": "git",
