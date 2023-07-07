@@ -2,11 +2,11 @@
 // (I'm treating it like a library)
 
 const {REST, Routes} = require("discord.js");
-const dotenv = require("dotenv");
 const fs = require("node:fs");
 const path = require("node:path");
 
-dotenv.config(); // Load environmental variables
+require("dotenv").config();
+const {CLIENT_ID, GUILD_ID, DEPLOY_GLOBAL} = process.env;
 
 const commands = [];
 
@@ -49,8 +49,6 @@ const rest = new REST().setToken(process.env.TOKEN);
     console.log(`Started refreshing ${commands.length} application (/) commands.`);
 
     let metadata;
-    const {CLIENT_ID, GUILD_ID, DEPLOY_GLOBAL} = process.env;
-
     if (DEPLOY_GLOBAL === "true") {
       // Global deployment
       metadata = Routes.applicationCommands(CLIENT_ID);

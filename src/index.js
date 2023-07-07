@@ -1,7 +1,7 @@
 const {Client, Events, GatewayIntentBits} = require("discord.js");
-const dotenv = require("dotenv");
 
-dotenv.config(); // Load environmental variables
+require("dotenv").config();
+const {TOKEN} = process.env;
 
 const client = new Client({
   intents: [
@@ -17,5 +17,5 @@ client.once(Events.ClientReady, c => {
   console.log(`Client ready! Logged in as ${c.user.tag}.`);
 });
 
-client.login(process.env.TOKEN);
+client.login(TOKEN);
 console.log("app.js ran successfully!");
