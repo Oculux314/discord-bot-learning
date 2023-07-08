@@ -36,11 +36,5 @@ client.on(Events.InteractionCreate, async interaction => {
   }
 });
 
-client.on(Events.MessageCreate, msg => {
-  if (msg.author.bot) return;
-  console.log(`${msg.member.displayName}: ${msg.content}`);
-  msg.reply({content: `Greetings,\nI am ${msg.member.displayName}.`}); // Chara
-});
-
 client.login(TOKEN);
 console.log("app.js ran successfully!");
