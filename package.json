@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "npx eslint src && nodemon src/index.js",
+    "test": "npx eslint src && node src/index.js",
+    "dev": "nodemon src/index.js",
     "lint": "npx eslint src",
     "lint:f": "npx eslint src --fix",
     "deploy": "node src/deploy-commands.js",
